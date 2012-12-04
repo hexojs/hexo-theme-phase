@@ -1,0 +1,48 @@
+<%
+var title = '';
+if (page.category) title += 'Category: ' + page.category;
+if (page.tag) title += 'Tag: ' + page.tag;
+if (page.archive){
+  if (page.year) title += 'Archives: ' + page.year + (page.month ? '/' + page.month : '');
+  else title += 'Archives';
+}
+%>
+
+<header id="archive-header">
+  <h1 class="alignleft"><%= title %></h1>
+  <div class="search alignright">
+    <form action="http://google.com/search" method="get" accept-charset="utf-8">
+      <input type="text" name="q" results="0" placeholder="Search">
+      <input type="hidden" name="q" value="site:<%- config.url.replace(/^https?:\/\//, '') %>">
+    </form>
+  </div>
+</header>
+
+<% if (pagination == 2){ %>
+  <% page.posts.each(function(item){ %>
+    <%- partial('article', {item: item, index: true}) %>
+  <% }); %>
+
+  <%- partial('pagination') %>
+<% } else { %>
+  <% var this_year; %>
+  <% page.each(function(item){ %>
+    <% var year = item.date.year(); %>
+    <% if (this_year != year || !this_year){ %>
+      <% this_year = year; %>
+      </section><section class="archives"><div class="year"><%= year %></div>
+    <% } %>
+    <article class="archive">
+      <h1 class="title"><a href="<%- config.root %><%- item.permalink %>"><%= item.title %></a></h1>
+      <footer>
+        <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format('MMM D') %></time>
+        <% if (item.categories){ %>
+          <div class="cats"><%- partial('post/taxonomy', {taxonomy: item.categories, separator: ', '}) %></div>
+        <% } %>
+        <% if (item.tags){ %>
+          <div class="tags"><%- partial('post/taxonomy', {taxonomy: item.tags, separator: ', '}) %></div>
+        <% } %>
+      </footer>
+    </article>
+  <% }); %>
+<% } %>

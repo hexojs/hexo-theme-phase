@@ -1,0 +1,23 @@
+<article class="<%= item.layout %>">
+  <header>
+    <%- partial('post/title') %>
+    <% if (item.layout == 'post'){ %><%- partial('post/date') %><% } %>
+  </header>
+  <div class="entry-content">
+    <% if (item.excerpt && index){ %>
+      <%- item.excerpt %>
+    <% } else { %>
+      <%- item.content %>
+    <% } %>
+    <% if (item.layout == 'post'){ %>
+    <footer class="meta">
+      <%- partial('post/category') %>
+      <%- partial('post/tag') %>
+      <% if (config.disqus_shortname && item.comment){ %>
+        <a href="<%- item.permalink %>#disqus_thread" class="comment">Comments</a>
+      <% } %>
+    </footer>
+    <% } %>
+  </div>
+  <%- partial('comment') %>
+</article>

@@ -1,0 +1,23 @@
+<div class="social alignright">
+  <% if (theme.facebook){ %>
+    <a class="facebook" href="http://www.facebook.com/<%= theme.facebook %>" title="Facebook">Facebook</a>
+  <% } %>
+  <% if (theme.google_plus){ %>
+    <a class="google" href="https://plus.google.com/<%= theme.google_plus %>" title="Google+">Google+</a>
+  <% } %>
+  <% if (theme.twitter){ %>
+    <a class="twitter" href="http://twitter.com/<%= theme.twitter %>" title="Twitter">Twitter</a>
+  <% } %>
+  <% if (theme.github){ %>
+    <a class="github" href="https://github.com/<%= theme.github %>" title="GitHub">GitHub</a>
+  <% } %>
+  <a class="rss" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="RSS">RSS</a>
+</div>
+<p>
+  <% if (config.author){ %>
+  &copy; <%= new Date().getFullYear() %> <%= config.author %>
+  <% } else { %>
+  &copy; <%= new Date().getFullYear() %> <%= config.title %>
+  <% } %>
+</p>
+<div class="clearfix"></div>
