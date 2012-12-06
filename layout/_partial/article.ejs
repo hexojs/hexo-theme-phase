@@ -1,4 +1,7 @@
-<article class="<%= item.layout %>">
+<article class="post">
+  <% if (item.photos){ %>
+    <%- partial('post/gallery') %>
+  <% } %>
   <header>
     <%- partial('post/title') %>
     <% if (item.layout == 'post'){ %><%- partial('post/date') %><% } %>

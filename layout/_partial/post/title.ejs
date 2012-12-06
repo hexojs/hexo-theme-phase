@@ -1,8 +1,8 @@
 <% if (item.link){ %>
   <% if (item.title){ %>
-    <h1 class="title"><a href="<%- item.link %>" target="_blank"><%= item.title %></a></h1>
+    <h1 class="title"><a href="<%- item.link %>" class="link" target="_blank"><%= item.title %></a></h1>
   <% } else { %>
-    <h1 class="title"><a href="<%- item.link %>" target="_blank"><%= item.link %></a></h1>
+    <h1 class="title"><a href="<%- item.link %>" class="link" target="_blank"><%= item.link %></a></h1>
   <% } %>
 <% } else { %>
   <% if (index){ %>
