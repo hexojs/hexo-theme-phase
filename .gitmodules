@@ -1,0 +1,3 @@
+[submodule "themes/phase"]
+	path = themes/phase
+	url = https://github.com/tommy351/hexo-theme-phase.git
