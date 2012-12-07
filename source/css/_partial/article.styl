@@ -147,6 +147,17 @@ article
           &:hover
             color color-font
 
+    .pullquote
+      float right
+      border none
+      padding 0
+      margin 1em 0 0.5em 1.5em
+      text-align left
+      width 45%
+      font-size 1.5em
+      &:before, &:after
+        display none
+
     iframe
       border none
 
@@ -181,30 +192,6 @@ article
       padding-top 15px
       iframe
         margin-top 0
-
-    [class^="pullquote"]
-      float right
-      width 45%
-      display block
-      margin 0.5em 0 1em 1.5em
-      color #666
-      font-size 1.2em
-      font-style italic
-      font-family font-serif
-      position relative
-      padding-left 35px
-      &:before
-        position absolute
-        color color-border
-        line-height 1
-        font-size 50px
-        top 0
-        content "“"
-        left 0
-
-    .pullquote-left
-      float left
-      margin 0.5em 1.5em 1em 0
 
 .post
   &:before
