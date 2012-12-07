@@ -8,7 +8,7 @@ email:
 language:
 
 # Permalink
-root: /
+root: /hexo-theme-phase/
 permalink: :year/:month/:day/:title/
 tag_dir: tags
 archive_dir: archives
