@@ -12,7 +12,7 @@
     <% } else { %>
       <%- item.content %>
     <% } %>
-    <% if (item.layout == 'post'){ %>
+    <% if (item.layout != 'page'){ %>
     <footer class="meta">
       <%- partial('post/category') %>
       <%- partial('post/tag') %>
