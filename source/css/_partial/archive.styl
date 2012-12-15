@@ -85,13 +85,19 @@
           font-family font-icon
           padding-right 10px
 
-      .tags
-        display inline-block
+      .cats, .tags
         margin-left 25px
         &:before
-          content "\f02c"
           font-family font-icon
           padding-right 10px
+
+      .cats
+        &:before
+          content "\f07c"
+
+      .tags
+        &:before
+          content "\f02c"
 
 .archive
   box-shadow none

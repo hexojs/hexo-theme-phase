@@ -224,36 +224,39 @@ article
       color color-meta
       font-size 0.9em
       position absolute
-      top 30px
+      top 10px
       left 0 - meta-width - 20px
       width meta-width
       z-index 1
       a
         color color-meta
         display block
+        line-height 1.6em
         &:hover
           color darken(color-meta, 20%)
+          text-decoration none
+        &:before
+          font-family font-icon
+
+      .cats, .tags, .comment
+        margin-top 20px
+
+      .cats
+        a
+          &:before
+            content "\f07b"
+            padding-right 10px
 
       .tags
-        line-height 1.6em
         a
           &:before
             content "\f02b"
-            font-family font-icon
             padding-right 10px
 
-          &:hover
-            text-decoration none
-
       .comment
-        margin-top 20px
         &:before
           content "\f075"
-          font-family font-icon
           padding-right 8px
-
-        &:hover
-          text-decoration none
 
   .gallery
     overflow hidden

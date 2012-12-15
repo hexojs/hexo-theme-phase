@@ -37,10 +37,10 @@ if (page.archive){
       <footer>
         <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format('MMM D') %></time>
         <% if (item.categories){ %>
-          <div class="cats"><%- partial('post/taxonomy', {taxonomy: item.categories, separator: ', '}) %></div>
+          <span class="cats"><%- partial('post/taxonomy', {taxonomy: item.categories, separator: ', '}) %></span>
         <% } %>
         <% if (item.tags){ %>
-          <div class="tags"><%- partial('post/taxonomy', {taxonomy: item.tags, separator: ', '}) %></div>
+          <span class="tags"><%- partial('post/taxonomy', {taxonomy: item.tags, separator: ', '}) %></span>
         <% } %>
       </footer>
     </article>
