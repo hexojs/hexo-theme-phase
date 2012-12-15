@@ -17,7 +17,7 @@
       <%- partial('post/category') %>
       <%- partial('post/tag') %>
       <% if (config.disqus_shortname && item.comment){ %>
-        <a href="<%- item.permalink %>#disqus_thread" class="comment">Comments</a>
+        <a href="<%- item.permalink %>#disqus_thread" class="comment"><%= __('comment') %></a>
       <% } %>
     </footer>
     <% } %>
