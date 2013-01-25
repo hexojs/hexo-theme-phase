@@ -12,7 +12,7 @@ if (page.archive){
   <h1 class="alignleft"><%= title %></h1>
   <div class="search alignright">
     <form action="http://google.com/search" method="get" accept-charset="utf-8">
-      <input type="text" name="q" results="0" placeholder="<%= __('search') %>">
+      <input type="search" name="q" results="0" placeholder="<%= __('search') %>">
       <input type="hidden" name="q" value="site:<%- config.url.replace(/^https?:\/\//, '') %>">
     </form>
   </div>
