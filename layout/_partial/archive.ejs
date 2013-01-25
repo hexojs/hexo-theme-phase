@@ -36,10 +36,10 @@ if (page.archive){
       <h1 class="title"><a href="<%- config.root %><%- item.path %>"><%= item.title %></a></h1>
       <footer>
         <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format('MMM D') %></time>
-        <% if (item.categories){ %>
+        <% if (item.categories.length){ %>
           <span class="cats"><%- partial('post/taxonomy', {taxonomy: item.categories, separator: ', '}) %></span>
         <% } %>
-        <% if (item.tags){ %>
+        <% if (item.tags.length){ %>
           <span class="tags"><%- partial('post/taxonomy', {taxonomy: item.tags, separator: ', '}) %></span>
         <% } %>
       </footer>
