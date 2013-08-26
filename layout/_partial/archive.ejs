@@ -26,7 +26,7 @@ if (page.archive){
   <%- partial('pagination') %>
 <% } else { %>
   <% var this_year; %>
-  <% page.each(function(item){ %>
+  <% page.posts.each(function(item){ %>
     <% var year = item.date.year(); %>
     <% if (this_year != year || !this_year){ %>
       <% this_year = year; %>
