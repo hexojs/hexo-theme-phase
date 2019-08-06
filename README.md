@@ -7,7 +7,7 @@ Feel the flow of time with Phase, the most beautiful theme for [Hexo].
 Execute the following command and modify `theme` in `_config.yml` to `phase`.
 
 ``` bash
-$ git clone http://github.com/hexojs/hexo-theme-phase themes/phase
+$ git clone --depth 1 http://github.com/hexojs/hexo-theme-phase themes/phase
 ```
 
 ## Update
