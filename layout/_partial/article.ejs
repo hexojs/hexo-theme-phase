@@ -1,4 +1,4 @@
-<article class="<% if (item.layout == 'page'){ %>page<% } else { %>post<% } %>">
+<article class="h-entry <% if (item.layout == 'page'){ %>page<% } else { %>post<% } %>" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <% if (item.photos){ %>
     <%- partial('post/gallery') %>
   <% } %>
@@ -6,7 +6,7 @@
     <%- partial('post/title') %>
     <% if (item.layout != 'page'){ %><%- partial('post/date') %><% } %>
   </header>
-  <div class="entry-content">
+  <div class="e-content entry-content">
     <% if (item.excerpt && index){ %>
       <%- item.excerpt %>
     <% } else { %>
