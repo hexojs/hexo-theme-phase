@@ -18,3 +18,5 @@ github:
 fancybox: true
 google_analytics:
 rss:
+# Display a "Read More" link under each post's excerpt in /archives page
+#excerpt_link: 'Read More'
