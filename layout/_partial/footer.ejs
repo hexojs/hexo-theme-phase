@@ -11,7 +11,7 @@
   <% if (theme.github){ %>
     <a class="github" href="https://github.com/<%= theme.github %>" title="GitHub">GitHub</a>
   <% } %>
-  <a class="rss" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="RSS">RSS</a>
+  <a class="rss" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- url_for('atom.xml') %><% } %>" title="RSS">RSS</a>
 </div>
 <p>
   <% if (config.author){ %>
