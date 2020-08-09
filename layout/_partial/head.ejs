@@ -24,7 +24,6 @@
   <% } else if (page.content){ %>
   <meta name="description" content="<%= strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
   <% } %>
-  <% if (page.keywords){ %><meta name="keywords" content="<%= page.keywords %>"><% } %>
 
   <link rel="alternate" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
   <%- css('css/style.css') %>
