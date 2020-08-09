@@ -33,7 +33,7 @@ if (page.archive){
       </section><section class="archives"><div class="year"><%= year %></div>
     <% } %>
     <article class="archive">
-      <h1 class="title"><a href="<%- config.root %><%- item.path %>"><%= item.title %></a></h1>
+      <h1 class="title"><a href="<%- url_for(item.path) %>"><%= item.title %></a></h1>
       <footer>
         <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format('MMM D') %></time>
         <% if (item.categories.length){ %>

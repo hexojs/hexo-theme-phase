@@ -1,7 +1,7 @@
 <%
 var arr = [];
 taxonomy.forEach(function(item){
-  arr.push('<a href="' + config.root + item.path + '">' + item.name + '</a>');
+  arr.push('<a href="' + url_for(item.path) + '">' + item.name + '</a>');
 });
 %>
 <%- arr.join(separator) %>
