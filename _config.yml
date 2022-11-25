@@ -7,11 +7,9 @@ addthis:
   pubid:
   facebook: true
   twitter: true
-  google: true
   pinterest: true
 
 facebook:
-google_plus:
 twitter:
 github:
 
