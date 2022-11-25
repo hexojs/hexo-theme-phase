@@ -25,6 +25,9 @@
         <a href="<%- item.permalink %>#disqus_thread" class="comment"><%= __('comment') %></a>
       <% } %>
     </footer>
+    <% if (!index){ %>
+      <%- partial('post/share') %>
+    <% } %>
     <% } %>
   </div>
   <%- partial('comment') %>
