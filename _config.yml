@@ -2,11 +2,12 @@ menu:
   Home: /
   Archives: /archives
 
-addthis:
-  enable: true
-  pubid:
-  facebook: true
-  twitter: true
+# AddToAny Share. See: https://www.addtoany.com
+addtoany:
+  enable: false
+  buttons:
+    - facebook
+    - twitter
 
 facebook:
 twitter:
