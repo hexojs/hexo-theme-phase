@@ -18,7 +18,7 @@ _config.yml
 
 ## Update
 
-Execute the following command to update Light.
+Execute the following command to update Phase.
 
 ``` bash
 $ cd themes/phase
