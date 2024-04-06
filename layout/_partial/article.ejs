@@ -21,7 +21,7 @@
     <footer class="meta">
       <%- partial('post/category') %>
       <%- partial('post/tag') %>
-      <% if (config.disqus_shortname && item.comment){ %>
+      <% if (theme.disqus_shortname && item.comments){ %>
         <a href="<%- item.permalink %>#disqus_thread" class="comment"><%= __('comment') %></a>
       <% } %>
     </footer>
